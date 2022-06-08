@@ -77,7 +77,14 @@
                         </goals>
                     </execution>
                 </executions>
-
+                <configuration>
+                    <failBuildOnCVSS>11.0</failBuildOnCVSS>
+                    <!-- Generate all report formats -->
+                    <format>ALL</format>
+                    <!-- Don't use Nexus Analyzer -->
+                    <centralAnalyzerEnabled>false</centralAnalyzerEnabled>
+                    <failOnError>false</failOnError>
+                </configuration>
             </plugin>
             <!-- test coverage -->
             <plugin>
